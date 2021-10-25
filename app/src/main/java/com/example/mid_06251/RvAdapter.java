@@ -46,8 +46,8 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         final DataItem myListData = listdata[position];
-        holder.imageView.setImageResource(listdata[position].getImgId());
-        holder.imageView.setImageResource(listdata[position].getImgId());
+        holder.imageView.setImageResource(Integer.parseInt(listdata[position].getImgId()));
+        holder.imageView.setImageResource(Integer.parseInt(listdata[position].getImgId()));
         holder.textView.setText(listdata[position].getDescription());
         holder.textView.setText(listdata[position].getDescription());
         holder.itemView.setOnClickListener(new View.OnClickListener() {

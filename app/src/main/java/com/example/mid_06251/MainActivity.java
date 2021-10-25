@@ -1,5 +1,6 @@
 package com.example.mid_06251;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -24,10 +25,31 @@ public final class MainActivity extends AppCompatActivity {
     private Context context;
     private LayoutInflater inf;
     private PopUp popUp;
+    @SuppressLint("CutPasteId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tombolpupop);
+        setContentView(R.layout.activity_main);
+        DataItem[] myListData = new DataItem[] {
+                new DataItem("Email", "android.R.drawable.ic_dialog_email"),
+                new DataItem("Info", "android.R.drawable.ic_dialog_info"),
+                new DataItem("Delete", "android.R.drawable.ic_delete"),
+                new DataItem("Dialer", "android.R.drawable.ic_dialog_dialer"),
+                new DataItem("Alert", "android.R.drawable.ic_dialog_alert"),
+                new DataItem("Map", "android.R.drawable.ic_dialog_map"),
+                new DataItem("Email", "android.R.drawable.ic_dialog_email"),
+                new DataItem("Info", "android.R.drawable.ic_dialog_info"),
+                new DataItem("Delete", "android.R.drawable.ic_delete"),
+                new DataItem("Dialer", "android.R.drawable.ic_dialog_dialer"),
+                new DataItem("Alert", "android.R.drawable.ic_dialog_alert"),
+                new DataItem("Map", "android.R.drawable.ic_dialog_map"),
+        };
+
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rv_item);
+        RvAdapter adapter = new RvAdapter(myListData);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(adapter);
 
         content = findViewById(R.id.content);
         bt = findViewById(R.id.button);

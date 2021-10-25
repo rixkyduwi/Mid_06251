@@ -6,8 +6,8 @@ import org.jetbrains.annotations.Nullable;
 
 public final class DataItem {
     private String description;
-    private int imgId;
-    public DataItem(String description, int imgId) {
+    private String imgId;
+    public DataItem(String description, String imgId) {
         this.description = description;
         this.imgId = imgId;
     }
@@ -17,10 +17,10 @@ public final class DataItem {
     public void setDescription(String description) {
         this.description = description;
     }
-    public int getImgId() {
+    public String getImgId() {
         return imgId;
     }
-    public void setImgId(int imgId) {
+    public void setImgId(String imgId) {
         this.imgId = imgId;
     }
 }

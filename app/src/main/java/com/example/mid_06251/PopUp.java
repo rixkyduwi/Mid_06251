@@ -27,9 +27,9 @@ class PopUp implements View.OnClickListener {
         LinearLayout ly = v.findViewById(R.id.ly_pop_up);
 
         TextView chat = v.findViewById(R.id.chat);
-        TextView call = v.findViewById(R.id.jmlharga);
-        Button video = v.findViewById(R.id.video);
-        Button info = v.findViewById(R.id.info);
+        TextView jumlah = v.findViewById(R.id.jmlharga);
+        Button kurang = v.findViewById(R.id.video);
+        Button tambah = v.findViewById(R.id.info);
 
         batal.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,7 +49,7 @@ class PopUp implements View.OnClickListener {
             }
         });
         chat.setOnClickListener(this);
-
+jumlah.setText("8000");
     }
 
     @Override
@@ -61,15 +61,18 @@ class PopUp implements View.OnClickListener {
                 break;
             case R.id.jmlharga:
 //              aksi ketika tombol call di klik
-                Log.d("klik", "call");
+                Log.d("klik", "harga sekarang "+R.id.jmlharga);
+
                 break;
             case R.id.video:
 //              aksi ketika tombol video di klik
                 Log.d("klik", "video");
+
                 break;
             case R.id.info:
 //              aksi ketika tombol info di klik
-                Log.d("klik", "info");
+                Log.d("klik", "data berhasil ditambahkan");
+
                 break;
         }
     }

@@ -14,7 +14,10 @@
             android:id="@+id/ly_batal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"></LinearLayout>
+            android:orientation="vertical">
+
+
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/ly_pop_up"
@@ -98,7 +101,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:tint="@color/hijau"
-                        android:onClick="kurang"
                         android:text="-"
                         android:textStyle="bold"
                         tools:ignore="VectorDrawableCompat" />
@@ -112,7 +114,6 @@
                         android:textStyle="bold"
                         android:layout_marginLeft="5dp"
                         android:tint="@color/hijau"
-                        android:onClick="tambah"
                         tools:ignore="VectorDrawableCompat" />
 
                 </LinearLayout>
