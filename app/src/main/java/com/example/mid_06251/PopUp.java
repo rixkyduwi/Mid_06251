@@ -1,6 +1,7 @@
 package com.example.mid_06251;
 
 import android.content.Context;
+import android.media.ImageReader;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,7 +26,7 @@ class PopUp implements View.OnClickListener {
         content.addView(v);
         LinearLayout batal = v.findViewById(R.id.ly_batal);
         LinearLayout ly = v.findViewById(R.id.ly_pop_up);
-
+ImageView kopi = v.findViewById(R.id.imageView5);
         TextView chat = v.findViewById(R.id.chat);
         TextView jumlah = v.findViewById(R.id.jmlharga);
         Button kurang = v.findViewById(R.id.video);
@@ -34,7 +35,7 @@ class PopUp implements View.OnClickListener {
         batal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View vv) {
-                if (POP_BATAL == true){
+                if (POP_BATAL){
                     Log.d("batal", "klik");
                     content.removeView(v);
                 }else{

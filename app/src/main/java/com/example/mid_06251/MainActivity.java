@@ -31,7 +31,7 @@ public final class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         DataItem[] myListData = new DataItem[] {
-                new DataItem("Email", "android.R.drawable.ic_dialog_email"),
+                new DataItem("Email", "http://github.com/github.jpg"),
                 new DataItem("Info", "android.R.drawable.ic_dialog_info"),
                 new DataItem("Delete", "android.R.drawable.ic_delete"),
                 new DataItem("Dialer", "android.R.drawable.ic_dialog_dialer"),
@@ -50,20 +50,6 @@ public final class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
-
-        content = findViewById(R.id.content);
-        bt = findViewById(R.id.button);
-        context = this;
-        inf = (LayoutInflater) getSystemService(this.LAYOUT_INFLATER_SERVICE);
-        popUp = new PopUp(context, inf);
-
-        bt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                popUp.tampilPopUp(content);
-            }
-        });
-
 
     }
 
