@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -18,13 +19,17 @@ import java.util.List;
 import kotlin.collections.CollectionsKt;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.Nullable;
+import butterknife.BindView;
 
 public final class MainActivity extends AppCompatActivity {
+
+    @BindView(R.id.textView1)TextView textView1;
     private FrameLayout content;
     private Button bt;
     private Context context;
     private LayoutInflater inf;
     private PopUp popUp;
+    Button buttoncaddy;
     @SuppressLint("CutPasteId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +56,8 @@ public final class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
+
+        }
     }
 
-}
+

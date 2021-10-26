@@ -22,6 +22,7 @@ class PopUp implements View.OnClickListener {
     }
 
     public void tampilPopUp(final FrameLayout content) {
+
         final View v = inf.inflate(R.layout.popupview, null);
         content.addView(v);
         LinearLayout batal = v.findViewById(R.id.ly_batal);

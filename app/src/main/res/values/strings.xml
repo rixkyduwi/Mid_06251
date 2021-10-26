@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Mid_06251</string>
+    <string name="btn" type="id">Button</string>
 </resources>

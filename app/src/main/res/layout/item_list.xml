@@ -15,8 +15,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/button"
-    android:background="@color/transparan2"
-    >
+    />
     <RelativeLayout
 
         android:layout_width="match_parent"
@@ -76,5 +75,4 @@
             android:layout_toRightOf="@+id/iv_item" />
 
     </RelativeLayout>
-</Button>
 </RelativeLayout>
