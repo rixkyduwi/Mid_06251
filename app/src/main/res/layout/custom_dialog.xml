@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,8 +16,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
-
         </LinearLayout>
 
         <LinearLayout
@@ -30,7 +29,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@android:color/white"
                 android:orientation="vertical">
 
                 <FrameLayout
@@ -38,11 +36,9 @@
                     android:layout_height="300dp">
 
                     <ImageView
-                        android:id="@+id/imageView5"
+                        android:id="@+id/img"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/blackcoffe" />
+                        android:layout_height="wrap_content"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -54,19 +50,24 @@
                         android:paddingBottom="10dp">
 
                         <TextView
-                            android:id="@+id/textView"
+                            android:id="@+id/name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Black Coffe"
                             android:textColor="@android:color/white" />
+
                     </LinearLayout>
 
                 </FrameLayout>
+
                 <TextView
                     android:id="@+id/deskripsi"
+                    android:background="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="lorem"
+                    android:justificationMode="inter_word"
+                    android:padding="3pt"
                     />
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -80,10 +81,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:tint="@color/hijau"
                         android:text="harga = "
-                        android:textSize="16dp"
-                        tools:ignore="VectorDrawableCompat" />
+                        android:textSize="16dp"/>
 
                     <TextView
                         android:id="@+id/jmlharga"
@@ -91,30 +90,33 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:hint="8000"
+                        android:textSize="16dp"/>
+                    <TextView
+                        android:id="@+id/jmlsatuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="X1"
                         android:textSize="16dp"
-                        android:tint="@color/hijau"
-                        tools:ignore="VectorDrawableCompat" />
-
+                        android:tint="@color/hijau"/>
                     <Button
-                        android:id="@+id/video"
+                        android:id="@+id/btnkurang"
                         android:layout_width="30dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:tint="@color/hijau"
                         android:text="-"
-                        android:textStyle="bold"
-                        tools:ignore="VectorDrawableCompat" />
+                        android:textStyle="bold"/>
 
                     <Button
-                        android:id="@+id/info"
+                        android:id="@+id/btnjumlah"
                         android:layout_width="30dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="+"
                         android:textStyle="bold"
                         android:layout_marginLeft="5dp"
-                        android:tint="@color/hijau"
-                        tools:ignore="VectorDrawableCompat" />
+                        android:tint="@color/hijau"/>
 
                 </LinearLayout>
             </LinearLayout>
