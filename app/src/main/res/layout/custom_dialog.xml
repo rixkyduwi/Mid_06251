@@ -38,7 +38,8 @@
                     <ImageView
                         android:id="@+id/img"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/blackcoffe"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -66,6 +67,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="lorem"
+                    android:textSize="@dimen/_10ssp"
                     android:justificationMode="inter_word"
                     android:padding="3pt"
                     />
@@ -81,7 +83,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="harga = "
+                        android:text="harga = RP"
                         android:textSize="16dp"/>
 
                     <TextView
@@ -89,14 +91,21 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:hint="8000"
+                        android:hint="10"
                         android:textSize="16dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="X"
+                        android:textSize="16dp"
+                        android:tint="@color/hijau"/>
                     <TextView
                         android:id="@+id/jmlsatuan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:hint="X1"
+                        android:hint="1"
                         android:textSize="16dp"
                         android:tint="@color/hijau"/>
                     <Button
@@ -109,7 +118,7 @@
                         android:textStyle="bold"/>
 
                     <Button
-                        android:id="@+id/btnjumlah"
+                        android:id="@+id/btntambah"
                         android:layout_width="30dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -119,7 +128,13 @@
                         android:tint="@color/hijau"/>
 
                 </LinearLayout>
+
             </LinearLayout>
+            <Button
+                android:id="@+id/beli"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BUY"/>
         </LinearLayout>
     </FrameLayout>
 

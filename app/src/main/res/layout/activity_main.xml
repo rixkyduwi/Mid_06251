@@ -1,25 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <FrameLayout
-        android:id="@+id/content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="popup"
-        android:id="@+id/lybutton">
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/recyclerview"
-        android:layout_marginBottom="5dp"/>
-    </LinearLayout>
-    </FrameLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@drawable/backgroundcafe"
+      android:orientation="vertical">
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Aplikasi Pemesanan Kopi"
+          android:textStyle="bold"
+          android:textColor="@color/white"
+          android:gravity="center"/>
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Farid Ari wibowo - MID06251"
+          android:textStyle="bold"
+          android:textColor="@color/white"
+          android:gravity="center"/>
+      <FrameLayout
+          android:id="@+id/content"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
 
-</RelativeLayout>
+          <androidx.constraintlayout.widget.ConstraintLayout
+              android:id="@+id/lybutton"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:text="popup">
+
+              <androidx.recyclerview.widget.RecyclerView
+                  android:id="@+id/recyclerview"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_marginBottom="5dp"
+                  tools:listitem="@layout/card"
+                  app:spanCount="2"
+                  app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                  />
+          </androidx.constraintlayout.widget.ConstraintLayout>
+      </FrameLayout>
+  </LinearLayout>
+</LinearLayout>
